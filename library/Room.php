@@ -17,9 +17,8 @@ class Room {
     }
 
     public function __toString() {
-        $str = 'Room №'.$this->number.'<br> length: ' . $this->length . '<br> width: ' . $this->width;
+        $str = '<br>===============Room №'.$this->number.'<br> length: ' . $this->length . '<br> width: ' . $this->width;
         $str .= '<br> height: ' . $this->height . '<br> ';
-        $str .= '<br>';
         if (empty($this->chairs)) {
             $str .= ' no chairs<br>';
         } else {
@@ -27,7 +26,6 @@ class Room {
                 $str .= $chair .'<br>';
             }
         }
-
         return $str;
     }
 

@@ -16,7 +16,7 @@ class Chair {
 
     public function __toString() {
         $str = 'Chair <br> length: ' . $this->length . '<br>width: ' . $this->width;
-        $str .= '<br>height: ' . $this->height . '<br>material: ' . $this->material . '<br>';
+        $str .= '<br>height: ' . $this->height . '<br>material: ' . $this->material ;
         return $str;
     }
 

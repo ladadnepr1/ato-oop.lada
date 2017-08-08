@@ -74,16 +74,27 @@
 ////$dr3=new Drivers('Петр', '3', 0, 'ТЭ');
 ////echo $dr3;
 //echo $tr1.'<br>';
-//==========================homework==========================
+//==========================homework=======
 include_once './library/Chair.php';
 include_once './library/Room.php';
-$ch1= new Chair(50, 50, 50, 'wood');
+include_once './library/Building.php';
+//===========building======================
+$building=new Building('ул.Св.Патрика,33');
 
-//$w=$ch1->getWidth();
-//echo '$w='.$w.'<br>';
-$room=new Room(5, 5, 3, '101');
-$room->addChair($ch1);
-//echo $room.'<br>';
+//==================cairs==================
+$ch1= new Chair(50, 50, 50, 'wood');
 $ch2=new Chair(60, 60, 80, 'wood');
-$room->addChair($ch2);
-echo $room.'<br>======================';
+$ch3=new Chair(50,60,60,'plywood');
+//================rooms====================
+$room1=new Room(5, 5, 3, '101');
+$room2=new Room(5, 6, 3, '102');
+$room3=new Room(5, 4, 3, '103');
+//===============add chairs to rooms=======
+$room1->addChair($ch1);
+$room2->addChair($ch2);
+$room3->addChair($ch3);
+//=============add rooms to building=======
+$building->addRoom($room1);
+$building->addRoom($room2);
+$building->addRoom($room3);
+echo 'Building: '.$building;

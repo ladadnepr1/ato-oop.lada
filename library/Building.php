@@ -10,7 +10,7 @@ class Building {
     }
 
     public function __toString() {
-        $str = 'Address:<br>' . $this->address;
+        $str = '<br>Address:<br>' . $this->address;
         if (empty($this->rooms)) {
             $str .= 'no rooms<br>';
         } else {
